@@ -10,6 +10,7 @@ html,body{
    display: flex;
    flex-wrap: wrap;
    background-color: #fbf4e5;
+   perspective: 1500px;
 }
 
 .card{
@@ -20,6 +21,7 @@ html,body{
     overflow: hidden;
     margin: 20px;
     border-radius: 20px;
+    transition: transform 1s ease;
 }
 
 .card img{
@@ -35,17 +37,20 @@ html,body{
     width: 100%;
     background: linear-gradient(transparent,black);
     bottom: -40%;
-    transition-property: bottom;
-    transition-duration: 0.4s;
-    transition-timing-function: ease;
     display: flex;
     justify-content: space-between;
     align-items: end;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 30px;
+    transition: bottom 0.4s ease;
+    
 }
 
 .card:hover .bottom{
     bottom: 0;
+}
+
+.card:hover{
+    transform: rotateX(30deg);
 }
